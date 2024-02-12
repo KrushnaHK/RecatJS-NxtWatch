@@ -1,40 +1,52 @@
 import styled from 'styled-components'
 
-export const LoginBgContainer = styled.div`
+export const AppContainer = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 `
-
 export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+  padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 100%;
-  max-width: 340px;
-  @media screen and (min-width: 768px) {
-    max-width: 500px;
-  }
+  width: 350px;
 `
 
-export const LoginLogoImage = styled.img`
-  height: 40px;
-  width: 200px;
-  margin-bottom: 30px;
+export const LoginLogo = styled.img`
+  width: 180px;
+  align-self: center;
+  margin-bottom: 15px;
 `
+
 export const InputContainer = styled.div`
   width: 100%;
   margin-top: 15px;
 `
-export const LabelInput = styled.label`
+
+export const LoginButton = styled.button`
+  width: 100%;
+  background-color: #4f46e5;
+  border: none;
+  border-radius: 5px;
   font-family: 'Roboto';
-  font-size: 14px;
+  font-size: 15px;
+  height: 30px;
+  color: #ffffff;
+  margin-top: 20px;
+`
+
+export const SubmitError = styled.p`
+  font-family: 'Roboto';
+  font-size: 12px;
+  color: #ff0b37;
+`
+
+export const InputLabel = styled.label`
+  font-family: 'Roboto';
+  font-size: 12px;
   color: #475569;
   font-weight: 500;
 `
@@ -45,44 +57,24 @@ export const UserInput = styled.input`
   color: #475569;
   outline: none;
   padding: 8px;
-  height: 40px;
   width: 100%;
   border: 1px solid #94a3b8;
   border-radius: 4px;
   margin-top: 5px;
 `
-
 export const CheckboxContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 20px;
+  margin: 12px;
 `
-export const CheckboxInput = styled.input`
+export const Checkbox = styled.input`
   width: 15px;
   height: 15px;
-  margin-right: 10px;
+  margin-right: 5px;
 `
-export const ShowPasswordLabel = styled.label`
+export const ShowPassword = styled.label`
   font-family: 'Roboto';
   font-size: 15px;
   color: #1e293b;
-`
-
-export const LoginButton = styled.button`
-  width: 100%;
-  background-color: #4f46e5;
-  border: none;
-  border-radius: 5px;
-  font-family: 'Roboto';
-  font-size: 15px;
-  height: 40px;
-  color: #ffffff;
-  margin-top: 20px;
-`
-
-export const SubmitError = styled.p`
-  font-family: 'Roboto';
-  font-size: 12px;
-  color: #ff0b37;
 `

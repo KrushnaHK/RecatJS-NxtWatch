@@ -8,7 +8,7 @@ import Header from '../Header'
 import NavigationBar from '../NavigationBar'
 import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
 import FailureView from '../FailureView'
-import TrendingVideoCard from '../TrendingVideoCard'
+import VideoCard from '../VideoCard'
 
 import {
   TrendingContainer,
@@ -49,6 +49,7 @@ class TrendingVideos extends Component {
     const response = await fetch(url, options)
     if (response.ok) {
       const data = await response.json()
+      // console.log(data)
       const updatedData = data.videos.map(eachVideo => ({
         id: eachVideo.id,
         title: eachVideo.title,
@@ -78,7 +79,7 @@ class TrendingVideos extends Component {
     return (
       <TrendingVideoList>
         {trendingVideos.map(eachVideo => (
-          <TrendingVideoCard key={eachVideo.id} videoDetails={eachVideo} />
+          <VideoCard key={eachVideo.id} videoDetails={eachVideo} />
         ))}
       </TrendingVideoList>
     )

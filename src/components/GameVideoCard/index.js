@@ -1,3 +1,5 @@
+// import {Link} from 'react-router-dom'
+
 import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
 
 import {
@@ -9,7 +11,7 @@ import {
   GamingViewsAndDate,
 } from './styledComponents'
 
-const GamingVideoCard = props => {
+const VideoCard = props => {
   const {videoDetails} = props
   const {id, title, thumbnailUrl, viewCount} = videoDetails
 
@@ -37,4 +39,4 @@ const GamingVideoCard = props => {
   )
 }
 
-export default GamingVideoCard
+export default VideoCard

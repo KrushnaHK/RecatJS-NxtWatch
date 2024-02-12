@@ -8,7 +8,7 @@ import Header from '../Header'
 import NavigationBar from '../NavigationBar'
 import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
 import FailureView from '../FailureView'
-import GamingVideoCard from '../GamingVideoCard'
+import GameVideoCard from '../GameVideoCard'
 
 import {
   GamingContainer,
@@ -49,6 +49,7 @@ class GamingVideos extends Component {
     const response = await fetch(url, options)
     if (response.ok) {
       const data = await response.json()
+      // console.log(data)
       const updatedData = data.videos.map(eachVideo => ({
         id: eachVideo.id,
         title: eachVideo.title,
@@ -75,7 +76,7 @@ class GamingVideos extends Component {
     return (
       <GamingVideoList>
         {gamingVideos.map(eachVideo => (
-          <GamingVideoCard key={eachVideo.id} videoDetails={eachVideo} />
+          <GameVideoCard key={eachVideo.id} videoDetails={eachVideo} />
         ))}
       </GamingVideoList>
     )
@@ -87,7 +88,7 @@ class GamingVideos extends Component {
 
   renderFailureView = () => <FailureView onRetry={this.onRetry} />
 
-  renderGamingVideos = () => {
+  renderTrendingVideos = () => {
     const {apiStatus} = this.state
 
     switch (apiStatus) {
@@ -122,7 +123,7 @@ class GamingVideos extends Component {
                   </GamingTitleIconContainer>
                   <GamingText color={textColor}>Gaming</GamingText>
                 </GamingVideoTitle>
-                {this.renderGamingVideos()}
+                {this.renderTrendingVideos()}
               </GamingContainer>
             </div>
           )

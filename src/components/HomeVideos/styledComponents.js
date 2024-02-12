@@ -21,7 +21,7 @@ export const NoVideosHeading = styled.h1`
 `
 
 export const NoVideosNote = styled.p`
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-size: 18px;
   color: ${props => props.noteColor};
 `

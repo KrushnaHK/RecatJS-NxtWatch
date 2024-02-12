@@ -1,3 +1,5 @@
+// import {Link} from 'react-router-dom'
+
 import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
 
 import {
@@ -13,7 +15,7 @@ import {
   TrendingDot,
 } from './styledComponents'
 
-const TrendingVideoCard = props => {
+const VideoCard = props => {
   const {videoDetails} = props
   const {
     id,
@@ -62,4 +64,4 @@ const TrendingVideoCard = props => {
   )
 }
 
-export default TrendingVideoCard
+export default VideoCard

@@ -52,12 +52,12 @@ export const TrendingTitle = styled.p`
   color: ${props => props.color};
 `
 export const TrendingChannelName = styled.p`
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-size: 13px;
   color: ${props => props.color};
 `
 export const TrendingViewsAndDate = styled.p`
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-size: 12px;
   color: ${props => props.color};
 `
