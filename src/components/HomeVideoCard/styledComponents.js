@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {Link} from 'react-router-dom'
 
 export const ListItem = styled.li`
   background: none;
@@ -53,4 +54,7 @@ export const Dot = styled.span`
   border-radius: 50%;
   padding-left: 5px;
   padding-right: 5px;
+`
+export const NavLink = styled(Link)`
+  text-decoration: none;
 `

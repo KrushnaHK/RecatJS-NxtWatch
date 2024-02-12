@@ -60,7 +60,7 @@ export const SearchContainer = styled.div`
   border: 1px solid #909090;
   border-radius: 3px;
   margin: 20px;
-  width: 60%;
+  width: 90%;
   height: 40px;
   @media screen and (min-width: 576px) {
     width: 40%;
@@ -82,7 +82,7 @@ export const SearchInput = styled.input`
   padding: 5px;
   border: none;
   color: ${props => props.color};
-  font-family: 'Roboto';
+  font-family: Roboto;
 `
 export const LoaderContainer = styled.div`
   display: flex;

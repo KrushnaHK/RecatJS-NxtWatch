@@ -47,7 +47,6 @@ class VideoDetailView extends Component {
     const {match} = this.props
     const {params} = match
     const {id} = params
-    // console.log(id)
     const jwtToken = Cookies.get('jwt_token')
 
     const url = `https://apis.ccbp.in/videos/${id}`
@@ -60,7 +59,6 @@ class VideoDetailView extends Component {
     const response = await fetch(url, options)
     if (response.ok) {
       const data = await response.json()
-      // console.log(data)
       const updatedData = this.formattedData(data)
       this.setState({
         videoDetails: updatedData,
